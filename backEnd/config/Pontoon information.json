@@ -1,0 +1,100 @@
+{
+ "ruleLength":239.75,
+ "maxPontoonDive":4.2,
+"pontoonConfig":[
+  { "id":1,
+    "xCoordinate":223.30,
+    "deflectionLimit":1.20,
+	"offset":0.31
+  },
+  {"id":2,
+    "xCoordinate":223.30,
+    "deflectionLimit":1.91,
+	"offset":0.35
+},
+  {"id":3,
+    "xCoordinate":187.92 ,
+    "deflectionLimit":1.51,
+	"offset":0.33
+  },
+  {
+  "id":4,
+    "xCoordinate":187.92 ,
+    "deflectionLimit":2.99,
+	"offset":0.36
+  },
+  {
+  "id":5,
+    "xCoordinate":159.79 ,
+    "deflectionLimit":3.33,
+	"offset":0.38
+  },
+   {
+  "id":6,
+    "xCoordinate":159.79 ,
+    "deflectionLimit":3.67,
+	"offset":0.30
+  },
+  {
+  "id":7,
+    "xCoordinate":139.56 ,
+    "deflectionLimit":3.9,
+	"offset":0.32
+  },
+  {
+  "id":8,
+    "xCoordinate":139.56 ,
+    "deflectionLimit":3.7,
+	"offset":0.29
+  },
+  {
+  "id":9,
+    "xCoordinate":119.26 ,
+    "deflectionLimit":3.2,
+	"offset":0.34
+  },
+  {
+  "id":10,
+    "xCoordinate":119.26 ,
+    "deflectionLimit":4.0,
+	"offset":0.38
+  },
+  {
+  "id":11,
+    "xCoordinate":90.63 ,
+    "deflectionLimit":4.1,
+	"offset":0.38
+  },
+  {
+  "id":12,
+    "xCoordinate":90.36 ,
+    "deflectionLimit":4.1,
+	"offset":0.30
+  },
+  {
+  "id":13,
+    "xCoordinate":54.38 ,
+    "deflectionLimit":2.9,
+	"offset":0.35
+  },
+  {
+  "id":14,
+    "xCoordinate":54.38 ,
+    "deflectionLimit":2.9,
+	"offset":0.35
+  },
+  {
+  "id":15,
+    "xCoordinate":11.96 ,
+    "deflectionLimit":2.1,
+	"offset":0.35
+  },
+  {
+  "id":16,
+    "xCoordinate":11.96 ,
+    "deflectionLimit":2.5,
+	"offset":0.35
+  }
+  
+  ]
+}

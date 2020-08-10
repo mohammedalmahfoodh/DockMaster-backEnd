@@ -36,8 +36,10 @@ public class PontoonController {
     }
 
     // Get pontoons Table  ****************   Get pontoons Table   *********************
+   // @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/hundredAlarms")
     public @ResponseBody ResponseEntity<List<Alarm>> getHundredAlarms() {
+
         List<Alarm> alarms = new ArrayList<>();
         try {
             alarms = pontoonService.getHundredAlarms().get();
@@ -108,12 +110,15 @@ public class PontoonController {
     }// Get list of Reference Pontoons Draft *****  Get list of Reference Pontoons Draft *************
 
     // Accept Pontoon Alarm  ****************   Accept Pontoon Alarm   *********************
+  //  @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping("/acceptPontoon")
     public ResponseEntity<String> acceptPontoonAlarm(@RequestBody @Valid PontoonPostObject pontoonPostObject) {
 
         try {
             boolean acceptedOrNot = pontoonService.makeAlarmAcknowledged(pontoonPostObject).get();
+
             if (acceptedOrNot){
+
                 return new ResponseEntity<>("Pontoon id " + pontoonPostObject.getPontoon_id() + " Accepted", HttpStatus.OK);
             }else {
                 return new ResponseEntity<>("Pontoon id " + pontoonPostObject.getPontoon_id() + " Not Accepted", HttpStatus.BAD_REQUEST);

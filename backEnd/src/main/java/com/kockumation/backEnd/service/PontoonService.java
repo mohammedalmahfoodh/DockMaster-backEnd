@@ -39,6 +39,7 @@ public class PontoonService {
 
     //Get  a list of latest 100 alarms from MySql. ******************** Get  a list of latest 100 alarms from MySql. ****************************************************
     public Future<List<Alarm>> getHundredAlarms() {
+
         List<Alarm> alarmList = new ArrayList<>();
         try (Connection conn = MySQLJDBCUtil.getConnection()) {
             String query = "SELECT al.alarm_id,al.alarm_name,al.alarm_active,al.acknowledged,al.pontoon_id,al.alarm_date,al.alarm_description,al.alarm_state,al.time_accepted,al.time_retrieved FROM alarms al order by  alarm_active desc ,acknowledged asc , alarm_state asc , alarm_date desc LIMIT 100";
@@ -149,8 +150,6 @@ public class PontoonService {
 
             if (pontoonDataForMap.isAlarm_active() || pontoonDataForMap.getAlarm_state() == 3) {
 
-                // System.out.println("Valve Alarm Accepted");
-
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
                 String timeAccepted = LocalDateTime.now(Clock.systemUTC()).format(formatter);
 
@@ -167,15 +166,22 @@ public class PontoonService {
                 } catch (ExecutionException e) {
                     e.printStackTrace();
                 }
+                return executor.submit(() -> {
+                    return true;
+                });
+            }//(pontoonDataForMap.isAlarm_active() || pontoonDataForMap.getAlarm_state() == 3)
+            else {
+                return executor.submit(() -> {
+                    return false;
+                });
             }
+
         } else {
             return executor.submit(() -> {
                 return false;
             });
         } // else
-        return executor.submit(() -> {
-            return true;
-        });
+
     } // Make Pontoon alarm Acknowledged *************** Make Pontoon alarm Acknowledged
 
     // Calculate heel and difference between current draft.

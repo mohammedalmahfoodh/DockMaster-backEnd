@@ -54,6 +54,7 @@ public class BackEndApplication {
                             } catch (URISyntaxException e) {
                                 e.printStackTrace();
                             }
+
                             dockMasterEngine = new DockMasterEngine();
                             dockMasterEngine.start();
 

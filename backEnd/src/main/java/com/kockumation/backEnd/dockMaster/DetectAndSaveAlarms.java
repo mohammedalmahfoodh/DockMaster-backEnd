@@ -241,7 +241,7 @@ public class DetectAndSaveAlarms {
             e.printStackTrace();
         }
 
-        timer.schedule(new TimerTask() {
+        timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
 

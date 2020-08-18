@@ -12,8 +12,9 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class MySQLJDBCUtil {
-    private static String propertiesFileLocation = FilePath.getCurrentDirPath()+"\\config\\application.properties";
-
+    // Locate the json file from current folder\config
+    //   private static String propertiesFileLocation = FilePath.getCurrentDirPath()+"\\config\\application.properties";
+    private static  String propertiesFileLocation = "C:\\Program Files (x86)\\Kockum Sonics\\DockMaster-backEnd\\config\\application.properties";
     private static FileInputStream fis = null;
     /**
      * Get database connection

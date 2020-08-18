@@ -21,7 +21,6 @@ com\kockumation\backEnd\model\DeltaDraft.class
 com\kockumation\backEnd\model\PontoonPostObject.class
 com\kockumation\backEnd\utilities\DockConfig.class
 com\kockumation\backEnd\TestWebsocketClient.class
-com\kockumation\backEnd\utilities\WebConfig$1.class
 com\kockumation\backEnd\global\Db.class
 com\kockumation\backEnd\model\Pontoon.class
 com\kockumation\backEnd\model\Alarm.class

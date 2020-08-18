@@ -17,7 +17,11 @@ public class DockConfig {
 
     public static String getPontoonInfoString() {
         File file = null;
-        String fileLocation = FilePath.getCurrentDirPath()+"\\config\\Pontoon information.json";
+
+        // Locate the json file from current folder\config
+       // String fileLocation = FilePath.getCurrentDirPath()+"\\config\\Pontoon information.json";
+        String fileLocation = "C:\\Program Files (x86)\\Kockum Sonics\\DockMaster-backEnd\\config\\Pontoon information.json";
+
         file = new File(fileLocation);
 
 //Read File Content

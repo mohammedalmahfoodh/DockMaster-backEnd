@@ -1,5 +1,5 @@
 @ECHO OFF
-start java -jar %CD%\backEnd-0.0.1.jar
+start java -jar F:\Java\Projects\DockMaster-backEnd\ExeDockMaster\DockMaster.jar
 echo Java running
 echo.
 echo.
@@ -12,3 +12,4 @@ echo.
 echo.
 echo.
 echo.
+PAUSE

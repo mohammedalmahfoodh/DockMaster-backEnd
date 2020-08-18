@@ -19,14 +19,15 @@ public class FilePath {
     // Get local uri for web socket server from application.properties located in config folder  ************
     public static String getLocalUri(){
 
-        String fileLocation =getCurrentDirPath()+"\\config\\application.properties";
+      //  String fileLocation =getCurrentDirPath()+"\\config\\application.properties";
+        String fileLocation ="C:\\Program Files (x86)\\Kockum Sonics\\DockMaster-backEnd\\config\\application.properties";
         FileInputStream fis = null;
         Properties prop = null;
         try {
             fis = new FileInputStream(fileLocation);
         } catch (FileNotFoundException e) {
 
-            System.out.println("Config file not found in \\Kockum Sonics\\ShipMaster-backEnd\\config");
+            System.out.println("Config file not found in \\Kockum Sonics\\DockMaster-backEnd\\config");
         }
         prop = new Properties();
         try {

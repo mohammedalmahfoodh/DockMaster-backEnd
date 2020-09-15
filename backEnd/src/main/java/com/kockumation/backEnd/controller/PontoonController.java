@@ -29,7 +29,7 @@ public class PontoonController {
     PontoonService pontoonService;
     // DetectAndSaveAlarms detectAndSaveAlarms = new DetectAndSaveAlarms();
 
-    @GetMapping("/getPontoonInfo")
+    @GetMapping("/getPontoonsInfo")
     public PontoonInformations getListOfPontoon() {
 
         return Db.pontoonInformations;
